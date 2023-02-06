@@ -1,0 +1,37 @@
+public class Polygon {
+    private int sides;
+    private Double sideLength;
+   private String shapeName;
+
+    void DefaultShape() {
+
+
+        sides = 3;
+        sideLength = 1.0;
+        shapeName = "triangle";
+    }
+
+    void GetDimensions(int s, double L, String N)
+    {sides = s;
+    sideLength = L;
+    shapeName = N;
+        System.out.println("You're shape is a " + N + " because it has " + s + " sides");
+        System.out.println("You're shape has a side length of " + L);
+
+
+    }
+    int getNumSides(int s) {
+
+        sides = s;
+        return (sides);
+    }
+    Double getSideLength(double L){
+        sideLength = L;
+        return(sideLength);
+    }
+    String getShapeName(String N){
+        shapeName = N;
+        return(shapeName);
+    }
+    };
+
