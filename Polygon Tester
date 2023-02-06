@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+public class PolygonTester {
+    public static void main(String args[]) {
+        Scanner input = new Scanner(System.in);
+        int NumSides;
+        Double SideLength;
+        String ShapeName;
+        System.out.println("How many sides does you shape have? Don't go over 12");
+        NumSides = input.nextInt();
+        System.out.println("How long is each side?");
+        SideLength = input.nextDouble();
+        ArrayList<String> NameList = new ArrayList<String>();
+        NameList.add("Triangle");
+        NameList.add("Square");
+        NameList.add("Pentagon");
+        NameList.add("Hexagon");
+        NameList.add("Heptagon");
+        NameList.add("Octagon");
+        NameList.add("Nonagon");
+        NameList.add("Decagon");
+        NameList.add("Hendegon");
+        NameList.add("Dodecagon");
+        ShapeName = NameList.get(NumSides - 3);
+        Polygon poly = new Polygon();
+        if (NumSides < 3 || SideLength < 0) {
+            System.out.println("You're input is invalid so you get the default shape");
+            poly.DefaultShape();
+
+        } else {
+poly.GetDimensions(NumSides,SideLength,ShapeName);
+
+        }
+    }
+};
